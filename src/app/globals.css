@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* ── Way To Moksha Brand Theme ─────────────────────────────── */
+@theme inline {
+  /* Brand palette */
+  --color-teal-primary:   #0d9488; /* teal-600  – primary accent  */
+  --color-teal-light:     #14b8a6; /* teal-500  – hover / light   */
+  --color-teal-subtle:    #ccfbf1; /* teal-100  – backgrounds     */
+  --color-saffron:        #f97316; /* orange-500 – warm accent     */
+  --color-saffron-light:  #fed7aa; /* orange-200 – soft saffron   */
+  --color-navy:           #1e3a5f; /* deep navy  – text / dark bg */
+  --color-navy-light:     #2d5382; /* lighter navy                */
+
+  /* Semantic aliases */
+  --color-background:     #ffffff;
+  --color-surface:        #f8fffe;
+  --color-border:         #e2e8f0;
+  --color-text-base:      #1e293b;
+  --color-text-muted:     #64748b;
+
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* ── Base styles ─────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-base);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Utility helpers ─────────────────────────────────────────── */
+.container-page {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container-page {
+    padding-inline: 2rem;
+  }
+}
